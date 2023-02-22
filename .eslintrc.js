@@ -16,5 +16,7 @@ module.exports = {
     'indent': 0,
     'space-before-function-paren': 0,
     'semi': 0,
+    'keyword-spacing': 0,
+    'quotes': 0
   }
 }
