@@ -19,7 +19,7 @@ export default function useSlider(wrapperRef) {
       probeType: 2,
       slide: true
     })
-    sliderVal.on('sliderWillChange', page => {
+    sliderVal.on('slideWillChange', page => {
       currentPageIndex.value = page.pageX
     })
   })
