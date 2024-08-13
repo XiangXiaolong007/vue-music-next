@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import SingerDetail from '@/views/singer-detail.vue'
 
 // 异步组件
 const Recommend = () => import('@/views/recommend.vue'/* webpackChunkName: 'recommend' */)
@@ -17,7 +18,13 @@ const routes = [
   },
   {
     path: '/singer',
-    component: Singer
+    component: Singer,
+    children: [
+      {
+        path: ':id',
+        component: SingerDetail
+      }
+    ]
   },
   {
     path: '/top-list',

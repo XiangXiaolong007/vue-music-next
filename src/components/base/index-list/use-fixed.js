@@ -3,7 +3,7 @@ import { computed, nextTick, ref, watch } from "vue";
 export default function useFixed(props) {
   const TITLE_HEIGHT = 30;
   const groupRef = ref(null);
-  const listHeights = ref([]);
+  const listHeights = ref([]); // 各个分组的高度
   const scrollY = ref(0);
   const currentIndex = ref(0);
   const distance = ref(0);
@@ -44,7 +44,7 @@ export default function useFixed(props) {
   function calculate() {
     const list = groupRef.value.children;
     const listHeightsVal = listHeights.value;
-    let height = 0;
+    let height = 0; // 总高度
 
     listHeightsVal.length = 0;
     listHeightsVal.push(height);
